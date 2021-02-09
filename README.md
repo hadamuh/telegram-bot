@@ -5,7 +5,7 @@
 > bash install.sh
 > nano bot.js
 > global.tokebot diganti 
-> ambil token api di [`FATHERBOT`](https://t.me/BotFather/
+> ambil token api di https://t.me/BotFather/
 > CTRL + X
 > node bot.js
 ```
