@@ -10,4 +10,5 @@ pkg install ffmpeg
 pkg install tesseract
 pkg install libwebp
 npm i 
+npm i yt-search
 npm start
