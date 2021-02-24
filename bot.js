@@ -139,6 +139,36 @@ return bot.sendMessage
 `)
 })
 
+bot.on('/play', async (msg) => {
+        const arg = msg.text
+    const args = arg.trim().split(/ +/).slice(1)
+    if (!args.join(' ')) return msg.reply.text('USAGE : <code>/play [judul]</code>', { parseMode: 'html',replyToMessage: msg.message_id})
+        let query = args.join(' ')
+        let ytdl = require('ytdl-core')
+        let yts = require('yt-search')
+        let fs = require('fs')
+        let results = await yts(query)
+  let vid = results.all.find(video => video.seconds < 3600)
+      let url = vid.url
+        if(ytdl.validateURL(url)){
+      audio_file = await './ytdl/' + 'audio' + ytdl.getURLVideoID(url) + '.mp3';
+      await msg.reply.text("Sedang mendownload...sabar ngab...");
+      await ytdl(url, {quality: "highestaudio", filter: "audioonly"})
+       .on('info', async (info) => {
+       judul = await info.videoDetails.title
+       console.log(info)
+       })
+        .pipe(fs.createWriteStream(audio_file).on('finish', async ()=>{
+          await msg.reply.text("Sedang mengirim...");
+          await bot.sendAudio(msg.chat.id, audio_file, {replyToMessage:msg.message_id, fileName: judul+'.mp3'}).then(async ()=>{
+            await fs.unlinkSync(audio_file);
+          });
+        }));
+    }else{
+      await msg.reply.text("Error | Video tidak ditemukan...");
+    }
+    })
+
 
 // require disini!
 
