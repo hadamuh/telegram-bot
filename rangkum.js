@@ -1,4 +1,3 @@
-console.log('rangkum.js AKTIF!')
 const summarizer = require('text-summarisation')
 const TeleBot = require('telebot')
 const delay = require('delay')

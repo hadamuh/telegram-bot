@@ -1,4 +1,4 @@
-console.log('barcode.js aktif!');
+
 
 const TeleBot = require('telebot');
 const delay = require('delay');
@@ -12,13 +12,13 @@ module.exports = bot => {
     bot.on(/^\/barcode ([\s\S]+)/, async (msg, args) => {
         let arg = args.match[1]
         if (arg.length < 1) return bot.sendMessage(msg.from.id, 'Silahkan Masukkan teks!')
-       await bot.sendMessage(msg.chat.id, 'Sedang Membuat Barcode...')
+       await msg.reply.text(mess.wait, { asReply: true })
      try {
-     var randomneko = await `https://api.zeks.xyz/api/barcode?apikey=apivinz&text=${arg}`
-        await bot.sendPhoto(msg.chat.id, `${randomneko}`)
-        await bot.sendMessage(msg.chat.id, 'Done Kak')
+     var randomneko = await `https://api.zeks.xyz/api/barcode?apikey=${zeksapi}&text=${arg}`
+        await msg.reply.photo(`${randomneko}`, { caption: mess.success, asReply: true })
         } catch (err) {
-            bot.sendMessage(msg.chat.id, `ERROR | ${err}`)
+           msg.reply.text(mess.errsys, { asReply: true })
+            bot.sendMessage(ownerid, `BARCODE ERROR : ${err}`)
         }
 
     })

@@ -1,5 +1,3 @@
-console.log('monitoring.js AKTIF!')
-
 const TeleBot = require('telebot')
 const delay = require('delay')
 var fs = require('fs')

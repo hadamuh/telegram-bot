@@ -1,5 +1,3 @@
-console.log('megumin.js aktif!');
-
 const TeleBot = require('telebot');
 const delay = require('delay');
 const axios = require('axios')

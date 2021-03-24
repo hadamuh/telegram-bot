@@ -1,5 +1,3 @@
-console.log('nulis4.js aktif!')
-
 const { spawn, exec } = require('child_process')
 const fs = require('fs')
 const { stdout } = require('process')
@@ -42,7 +40,10 @@ module.exports = bot => {
         })
 
     })
-    
+    bot.on(/^\/emoji2png ([\s\S]+)/, async (msg, args) => {
+    let argu = args.match[1]
+    bot.sendSticker(msg.chat.id, `https://api.zeks.xyz/api/emoji-image?apikey=${zeksapi}&emoji=${argu}`)
+    })
 } 
 
 

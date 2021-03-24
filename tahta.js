@@ -1,5 +1,3 @@
-console.log('neko.js aktif!');
-
 const TeleBot = require('telebot');
 const delay = require('delay');
 const axios = require('axios')
@@ -9,7 +7,7 @@ const bot = new TeleBot({
 })
 
 module.exports = bot => {
-    bot.on(/^\/tahta ([\s\S]+)/, async (msg, args) => {
+    bot.on(/^\/tahta2 ([\s\S]+)/, async (msg, args) => {
         let arg = args.match[1]
        await bot.sendMessage(msg.chat.id, 'Sedang Membuat Harta Tahta...')
      try {

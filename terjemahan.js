@@ -1,5 +1,3 @@
-console.log('terjemahan.js AKTIF!')
-
 const TeleBot = require('telebot')
 var translate = require('translation-google');
 const delay = require('delay')

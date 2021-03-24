@@ -1,5 +1,3 @@
-console.log('neko.js aktif!');
-
 const TeleBot = require('telebot');
 const delay = require('delay');
 const axios = require('axios')
@@ -16,7 +14,7 @@ module.exports = bot => {
     .then(async (res) => {
         var randomneko = await `${res.data.url}`
         await bot.sendPhoto(msg.chat.id, `${randomneko}`)
-        return await bot.sendMessage(msg.chat.id, 'KAWAIIIIII😍😍')
+        //return await bot.sendMessage(msg.chat.id, 'KAWAIIIIII😍😍')
 
     })
     .catch(async(err) => {

@@ -1,4 +1,4 @@
-console.log('animedl.js AKTIF!');
+
 
 const TeleBot = require('telebot');
 const delay = require('delay');

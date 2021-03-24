@@ -1,4 +1,4 @@
-const truth = [
+global.truth = [
  'menurut kamu crush kamu sekarang itu cocok gak sama kamu?',
         'pencapaian yang udah didapet apa aja ditahun ini?',
         'telpon crush kamu, kalo ditanya bilang aja kepencet',
@@ -30,9 +30,18 @@ const truth = [
         'siapa first love mu?',
         'apa ketakutan terbesar kamu?',
         'Kalau boleh atau kalau mau, di gc/luar gc siapa yang akan kamu jadikan sahabat?(boleh beda/sma jenis)',
-        'Pernah suka sama siapa aja? berapa lama?'
+        'Pernah suka sama siapa aja? berapa lama?',
+        'terakhir nangis kapan? karena apa?',
+        'pernah dendam ke orang ga? why?',
+        'panggilan dari cowo/cewe apa yg paling kamu suka ?',
+        'sifat cowo/cewe yg kayak mana yg kamu suka ?',
+        'lagu favorite yang lagi sering di dengerin tuh apa?',
+        'lebih suka mendem perasaan atau confess langsung?',
+        'Nama mantan yang paling disesalin karena pernah pacaran sama dia?',
+        'pernah suka sama sahabat sendiri ga? karna apa?',
+        'sifat cowo/cewe yg kayak mana yg kamu suka ?'
         ]
-        const dare = [
+        global.dare = [
  'makan 2 sendok nasi tanpa lauk apapun, kalo seret boleh minum',
         'spill orang yang bikin kamu jedag jedug',
         'telfon crush/pacar sekarang dan ss ke pemain',
@@ -67,9 +76,13 @@ const truth = [
         'kirim voice note bilang can i call u baby?',
         'ss recent call whatsapp',
         'Bilang "KAMU CANTIK BANGET NGGAK BOHONG" ke cowo!',
-        'pap ke salah satu anggota grup'
+        'pap ke salah satu anggota grup',
+        "gunakan kata \" syg \" saat typing di gc/pc",
+        "Chat ke bestie terdekat lu, bilang lu marah dan kecewa sm dia",
+        "tag orang yang lu sayang di roleplayer",
+        'ungkapin perasaan sayang ke orang yang beneran kamu sayang, ss ke pemain, boleh crop/tidak, bebas.',
+  
 ]
-console.log('tod.js aktif!');
 
 const TeleBot = require('telebot');
 const fs = require('fs')
@@ -81,10 +94,12 @@ const bot = new TeleBot({
 module.exports = bot => {
     bot.on(['/dare'], async (msg, args) => {
                 randomnix = dare[Math.floor(Math.random() * dare.length)]
-        return await bot.sendMessage(msg.chat.id, randomnix, { replyToMessage: msg.message_id })
+                tod = '*DARE*\n\n'+randomnix
+                msg.reply.text(tod, { asReply: true, parseMode: 'Markdown'})
     })
     bot.on(['/truth'], async (msg, args) => {
      randomnix = truth[Math.floor(Math.random() * truth.length)]
-     return await bot.sendMessage(msg.chat.id, randomnix, { replyToMessage: msg.message_id })
+     tod = '*TRUTH*\n\n'+randomnix
+     msg.reply.text(tod, { asReply: true, parseMode: 'Markdown'})
     })
 }

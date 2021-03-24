@@ -1,4 +1,4 @@
-console.log('filmtrend.js AKTIF!')
+
 const TeleBot = require('telebot')
 const delay = require('delay')
 const axios = require('axios')

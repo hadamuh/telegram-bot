@@ -1,4 +1,3 @@
-console.log('twtdl.js aktif!')
 const TeleBot = require('telebot')
 const delay = require('delay')
 var Twitter = require('twitter');

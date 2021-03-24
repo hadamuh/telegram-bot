@@ -1,5 +1,3 @@
-console.log('sendprivate.js AKTIF!')
-
 const TeleBot = require('telebot')
 const delay = require('delay')
 let dev = ownerid

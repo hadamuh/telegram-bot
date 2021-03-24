@@ -1,4 +1,4 @@
-console.log('igtv.js aktif!')
+
 
 const TeleBot = require('telebot')
 const delay = require('delay')

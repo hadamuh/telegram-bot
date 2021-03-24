@@ -1,5 +1,3 @@
-console.log('nulis3.js aktif!')
-
 const TeleBot = require('telebot')
 const delay = require('delay')
 const needle = require('needle')

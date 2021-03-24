@@ -1,5 +1,3 @@
-console.log('saran.js AKTIF!')
-
 const TeleBot = require('telebot')
 const delay = require('delay')
 const axios = require('axios')
@@ -23,11 +21,11 @@ const options = {
  
 // TANGGAL
 
-let idgrup = '1245178040'
+let idgrup = ownerid
 
 module.exports = bot => {
     bot.on(/^\/saran ([\s\S]+)/, async (msg, args) => {
-    let pesan = `=Saran=\n\nDari :\nNama Depan/Belakang : ${msg.from.first_name} ${msg.from.last_name}\nUsername : ${msg.from.username}\nID : ${msg.chat.id}\nDikirim tanggal : ${dateInNewTimezone}\n\nPesan :\n` + args.match[1]
+    let pesan = `=Saran=\n\nDari :\nNama Depan/Belakang : ${msg.from.first_name} ${msg.from.last_name || ''}\nUsername : ${msg.from.username}\nID : ${msg.chat.id}\nDikirim tanggal : ${dateInNewTimezone}\n\nPesan :\n` + args.match[1]
 
 if (cooldown.has(msg.chat.id)) {
 
@@ -35,7 +33,7 @@ if (cooldown.has(msg.chat.id)) {
 
     } else {    
         
-        await bot.sendMessage(idgrup, pesan)
+        await msg.reply.text(pesan)
         await msg.reply.text(`>> Berhasil mengirim saran ke dev (@caliph71)✍️👌\nTerima kasih banyak sudah mengirim saran🙏`)
 
         cooldown.add(msg.chat.id);

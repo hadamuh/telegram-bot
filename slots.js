@@ -1,4 +1,3 @@
-console.log('slots.js AKTIF!')
 const TeleBot = require('telebot')
 const delay = require('delay')
 const bot = new TeleBot({
@@ -9,8 +8,6 @@ const bot = new TeleBot({
 module.exports = bot => {
 
 bot.on(['/slots'], async (message) => {
-    bot.sendMessage(message.chat.id, 'Sedang mengacak...')
-    await delay(2000)
     let emojis = ["🍒", "🍎", "📘", "♦️", "💙", "💵"];
     let a = Math.floor(Math.random() * emojis.length);
     let b = Math.floor(Math.random() * emojis.length);
