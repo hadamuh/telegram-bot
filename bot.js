@@ -8,7 +8,7 @@ global.vhtear = 'Anakanjing123'
 //const util = require('util')
 global.mhankkey = 'Akbarneh'
 global.farzainkey = 'O8mUD3YrHIy9KM1fMRjamw8eg'
-global.tobzkey = 'BotWeA'
+global.tobzkey = 'JfxHmWDYEAWTyeFAZknl'
 
 const bot = new TeleBot({
     token: global.tokebot
@@ -353,10 +353,10 @@ bot.on(['/bpink'], async (msg) => {
     res = await fetch(teks)
   try {
     txt = await res.json()
-    msg.reply(JSON.stringify(txt, null, '\t'), { asReply: true })
+    msg.reply.text(JSON.stringify(txt, null, '\t'), { asReply: true })
   } catch (e) {
     txt = await res.text()
-    msg.reply(JSON.stringify(txt, null, '\t'), { asReply: true })
+    msg.reply.text(JSON.stringify(txt, null, '\t'), { asReply: true })
  }
  })
      bot.on(['/matrix'], async (msg) => {
