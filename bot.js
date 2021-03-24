@@ -6,7 +6,7 @@ global.ownerid = '1245178040'
 global.zeksapi = 'apivinz'
 global.vhtear = 'Anakanjing123'
 const util = require('util')
-global.mhankkey = 'R73mNBEhc6LtUJP9JbN4'
+global.mhankkey = 'Akbarneh'
 global.farzainkey = 'O8mUD3YrHIy9KM1fMRjamw8eg'
 global.tobzkey = 'BotWeA'
 
