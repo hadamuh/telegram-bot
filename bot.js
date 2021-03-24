@@ -5,7 +5,7 @@ global.tokebot = '1674864787:AAFlR4BkPYJ1Jb7mMOGw4i9yZ_PURUlj9-g'
 global.ownerid = '1245178040'
 global.zeksapi = 'apivinz'
 global.vhtear = 'Anakanjing123'
-const util = require('util')
+//const util = require('util')
 global.mhankkey = 'Akbarneh'
 global.farzainkey = 'O8mUD3YrHIy9KM1fMRjamw8eg'
 global.tobzkey = 'BotWeA'
@@ -250,7 +250,7 @@ bot.deleteMessage(msg.chat.id, msg.reply_to_message.message_id)
 })
 
 bot.on(['/runtime', '/uptime'], async (msg) => {
-uptime = kyun(process.uptime)
+uptime = kyun(await process.uptime)
 msg.reply.text(`uptime : ${uptime}`)
 })
 
@@ -351,15 +351,14 @@ bot.on(['/bpink'], async (msg) => {
     const args = arg.trim().split(/ +/).slice(1)
     teks = args.join(' ')
     res = await fetch(teks)
-  var txt = await res.text()
   try {
-    txt = util.format(JSON.parse(txt))
+    txt = await res.json()
+    msg.reply(JSON.stringify(txt, null, '\t'), { asReply: true })
   } catch (e) {
-    txt = txt
-  } finally {
-    msg.reply.text(txt.slice(0, 65536) , { asReply: true })
-  }
-  })
+    txt = await res.text()
+    msg.reply(JSON.stringify(txt, null, '\t'), { asReply: true })
+ }
+ })
      bot.on(['/matrix'], async (msg) => {
     const arg = msg.text
     const args = arg.trim().split(/ +/).slice(1)
