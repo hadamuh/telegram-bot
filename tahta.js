@@ -12,7 +12,7 @@ module.exports = bot => {
        await bot.sendMessage(msg.chat.id, 'Sedang Membuat Harta Tahta...')
      try {
      var randomneko = await `https://api.zeks.xyz/api/hartatahta?text=${arg}&apikey=${zeksapi}`
-        await bot.sendPhoto(msg.chat.id, await ht(arg))
+        await bot.sendPhoto(msg.chat.id, randomneko)
         await bot.sendMessage(msg.chat.id, 'Done Kak')
         } catch (err) {
             bot.sendMessage(msg.chat.id, `ERROR | ${err}`)
