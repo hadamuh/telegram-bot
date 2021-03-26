@@ -250,8 +250,8 @@ bot.deleteMessage(msg.chat.id, msg.reply_to_message.message_id)
 })
 
 bot.on(['/runtime', '/uptime'], async (msg) => {
-uptime = kyun(await process.uptime)
-msg.reply.text(`uptime : ${uptime}`)
+uptime = kyun(await process.uptime())
+msg.reply.text(`uptime : ${uptime}\nSystem : ${kyun(await require('os').uptime())`)
 })
 
 bot.on(['/ambil'], async (msg) => {
