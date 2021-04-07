@@ -1,7 +1,7 @@
 const TeleBot = require('telebot')
 const delay = require('delay')
 const fetch = require('node-fetch')
-global.tokebot = '1674864787:AAFlR4BkPYJ1Jb7mMOGw4i9yZ_PURUlj9-g'
+global.tokebot = '1674864787:AAHYUhuHzXC4RDVpZVLcPEaW1wfbFMOqcoA'
 global.ownerid = '1245178040'
 global.zeksapi = 'apivinz'
 global.vhtear = 'Anakanjing123'
