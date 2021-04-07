@@ -200,8 +200,7 @@ msg.reply.photo('http://placekitten.com/'+q3+'/'+q2, { asReply: true })
 bot.on('/leave', async (msg) => {
 if (ownerid.includes(msg.from.id)) {
 if (msg.chat.type == 'private') return msg.reply.text('Perintah Ini Khusus Didalam group!', { replyToMessage: msg.message_id })
-msg.reply.text('Goodbye👋')
-await bot.leaveChat(msg.chat.id)
+msg.reply.text('Goodbye👋').then(() => bot.leaveChat(msg.chat.id))
 } else {
     bot.sendMessage(msg.chat.id, 'Perintah Ini Khusus Developer Bot!', {replyToMessage: msg.message_id})
     await delay(3000)
@@ -214,13 +213,13 @@ const args = arg.trim().split(/ +/).slice(1)
 try {
 quotedText = msg.reply_to_message.text
 i = (teks) => {
-return teks.replace(/['a','o','u','e','A','O','U','E']/g, "i");
+return teks.replace(/['a','o','u','e']/g, "i").replace(/['A','O','U','E']/g, "I");
 }
 msg.reply.text(i(quotedText), { replyToMessage: msg.reply_to_message.message_id })
 } catch {
 if (args.length < 1) return msg.reply.text('Teksnya apa kak?', {replyToMessage: msg.message_id })
 i = (teks) => {
-return teks.replace(/['a','o','u','e','A','O','U','E']/g, "i");
+return teks.replace(/['a','o','u','e']/g, "i").replace(/['A','O','U','E']/g, "I");
 }
 msg.reply.text(i(args.join(' ')), { replyToMessage:msg.message_id })
 }
@@ -251,7 +250,7 @@ bot.deleteMessage(msg.chat.id, msg.reply_to_message.message_id)
 
 bot.on(['/runtime', '/uptime'], async (msg) => {
 uptime = kyun(await process.uptime())
-msg.reply.text(`uptime : ${uptime}\nSystem : ${kyun(await require('os').uptime())`)
+msg.reply.text(`uptime : ${uptime}\nSystem : ${kyun(await require('os').uptime())}`)
 })
 
 bot.on(['/ambil'], async (msg) => {
