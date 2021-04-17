@@ -1,14 +1,14 @@
 const TeleBot = require('telebot')
 const delay = require('delay')
 const fetch = require('node-fetch')
-global.tokebot = '1674864787:AAHYUhuHzXC4RDVpZVLcPEaW1wfbFMOqcoA'
+global.tokebot = '1692508428:AAGqirTHB4BVKy7t_qGK5wc9JIFWVvqqbWI'
 global.ownerid = '1245178040'
 global.zeksapi = 'apivinz'
-global.vhtear = 'Anakanjing123'
+global.vhtear = 'HADABOTWA'
 //const util = require('util')
-global.mhankkey = 'Akbarneh'
+global.mhankkey = 'BYz7ziEvXE9gXCYL8S5g'
 global.farzainkey = 'O8mUD3YrHIy9KM1fMRjamw8eg'
-global.tobzkey = 'JfxHmWDYEAWTyeFAZknl'
+global.tobzkey = 'UMcR66u6nLpjPPQ34gts'
 
 const bot = new TeleBot({
     token: global.tokebot
