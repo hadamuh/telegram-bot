@@ -106,7 +106,7 @@ bot.on(['/start'], async (msg) => {
       const arg = msg.text
 const args = arg.trim().split(/ +/).slice(1)
 
-const startMessage = `Hai ${msg.from.first_name}, Saya Caliph Bot Ketik /menu Untuk Menampilkan Menu!`
+const startMessage = `Hai ${msg.from.first_name}, Saya Lol Bot Ketik /menu Untuk Menampilkan Menu!`
     /*let replyMarkup = bot.keyboard([
         ['/menu ✏️🗒', '/readme 🗒🔍',
         '/about 🤖❗️'],
@@ -115,7 +115,7 @@ const startMessage = `Hai ${msg.from.first_name}, Saya Caliph Bot Ketik /menu Un
    case 'help':
    bot.sendAction(msg.chat.id, 'typing')
  bot.sendMessage
-(msg.chat.id, `Created By : @Caliph71\nLink Bot : https://t.me/Caliph71_bot?start\n_______________\n\n🤖LIST FITUR BOT Caliph🤖!\n
+(msg.chat.id, `Created By : @seorangpeople\nLink Bot : https://t.me/Lildl_bot?start\n_______________\n\n🤖LIST FITUR BOT Caliph🤖!\n
 =====[DAFTAR MENU]=====\n> /nulis [teks]\n> /nulis2 [teks]\n> /nulis3 [teks]\n> /anime [nama anime]
 > /animedl [nama anime]\n> /animedl2 [nama anime]\n> /filmtrend\n> /filmdetail [angka 1-20]
 > /cekresi [kurir] [resi]\n> /brainly [pertanyaan]\n> /lirik [nama artis - judul lagu]\n> /saran [teks]
@@ -125,7 +125,7 @@ const startMessage = `Hai ${msg.from.first_name}, Saya Caliph Bot Ketik /menu Un
 > /fbdl [link video facebook]\n> /igdl [link instagram]\n> /igtv [link instagram tv]\n> /igstory [angka] [username ig]
 > /igavatar [username ig]\n========================\n
 Kurang paham/kurang jelas ? => /readme
-Ingin tau tentang Bot Caliph ? => /about
+Ingin tau tentang Bot lol ? => /about
 `)
 break
 default:
@@ -421,7 +421,7 @@ bot.on(['/menu','/help'], async (msg) => {
     if (['group','supergroup'].includes(msg.chat.type)) return msg.reply.text(`[Contact me in PM for help!](https://t.me/${me.username}?start=help)`, { parseMode: 'Markdown', asReply: true })
 bot.sendAction(msg.chat.id, 'typing')
     return bot.sendMessage
-(msg.chat.id, `Created By : @Caliph71\nLink Bot : https://t.me/Caliph71_bot?start\n_______________\n\n🤖LIST FITUR BOT Caliph🤖!\n
+(msg.chat.id, `Created By : @seorangpeople\nLink Bot : https://t.me/Lildl_bot?start\n_______________\n\n🤖LIST FITUR BOT Caliph🤖!\n
 =====[DAFTAR MENU]=====\n> /nulis [teks]\n> /nulis2 [teks]\n> /nulis3 [teks]\n> /anime [nama anime]
 > /animedl [nama anime]\n> /animedl2 [nama anime]\n> /filmtrend\n> /filmdetail [angka 1-20]
 > /cekresi [kurir] [resi]\n> /brainly [pertanyaan]\n> /lirik [nama artis - judul lagu]\n> /saran [teks]
@@ -504,7 +504,7 @@ bot.on(['/readme'], async (msg) => {
 bot.sendAction(msg.chat.id, 'typing')
 Markup = {replyToMessage: msg.message_id}
 return bot.sendMessage
-(msg.chat.id, `_______________\n\n🤖INFO MENU🤖!\n\n===[Info Menu Fitur Caliph]===\n
+(msg.chat.id, `_______________\n\n🤖INFO MENU🤖!\n\n===[Info Menu Fitur lol]===\n
 /nulis = Untuk menulis tanpa membutuhkan pulpen atau kertas \n(Contoh Perintah : /nulis Halo nama saya ucup < sama dengan /nulis2 dan /nulis3)\n
 /anime = Untuk mencari info seputar anime, jumlah episode, sinopsis, rating, dan lainnya \n(Contoh Perintah : /anime death note)\n
 /cekresi = Untuk mengecek resi atau tracking paket lewat kurir dan resi yang di tulis \n(Contoh Perintah : /cekresi jne 4105xxxxxxxx320)\n
@@ -525,7 +525,7 @@ return bot.sendMessage
 /filmdetail = Untuk melihat detail filmtrend lebih lengkap \n(Contoh Perintah : /filmdetail 1)\n
 /slots = Untuk bermain game slots casino \n(Contoh Perintah : /slots)\n
 /cewecans = Untuk gacha gambar ciwi ciwi cantik :v \n(Contoh Perintah : /cewecans)\n
-/saran = Untuk mengirim saran ke dev (@caliph71) lewat bot! \n(Contoh Perintah : /saran Bang saran tambahin fitur hack satelit nasa)\n
+/saran = Untuk mengirim saran ke dev (@seorangpeople) lewat bot! \n(Contoh Perintah : /saran Bang saran tambahin fitur hack satelit nasa)\n
 
 ===[Sosmed Downloader]===\n
 /ytmp4 = Untuk mendownload video dari youtube berformat mp4 \n(Contoh Perintah : /ytmp4 https://youtu.be/dQw4w9WgXcQ)\n
@@ -538,7 +538,7 @@ return bot.sendMessage
 /igstory = Untuk mendownload video ig story di instagram sesuai angka urutan yang diinput \n(Contoh : /igstory 3 anone14_)\n
 /igavatar = Untuk mendownload avatar profil di instagram \n(Contoh : /igavatar anone14_)\n
 =====================\n
-Nantikan fitur-fitur unik Caliph lainnya, stay tuned terus ya 🦾🤖\n
+Nantikan fitur-fitur unik lol lainnya, stay tuned terus ya 🦾🤖\n
 _______________
 `, Markup)
 
@@ -554,20 +554,20 @@ return bot.sendMessage
 > Tolong bot nya jangan di spam😣
 > Cintai bot nya seperti kamu mencintai dia🤗
 > Semua perintah yang membutuhkan teks tidak perlu menggunakan tanda kurung kotak => [ ]👈
-> Masih bingung dengan fitur Caliph🤨? gunakan perintah /readme
+> Masih bingung dengan fitur lol🤨? gunakan perintah /readme
 > Bot masih dalam tahap pengembangan🔧
-> Terima kasih sudah menggunakan Bot Caliph😍
+> Terima kasih sudah menggunakan Bot lol😍
 
-> Beritahu pembuat bot jika saya mati atau jika kamu menemukan bug dan perintah yang malfungsi => @caliph71 (Atau lapor menggunakan /saran [text])
+> Beritahu pembuat bot jika saya mati atau jika kamu menemukan bug dan perintah yang malfungsi => @seorangpeople (Atau lapor menggunakan /saran [text])
 
 > Info Sosial Media :
-> Instagram : https://www.instagram.com/Caliph91_
+> Instagram : https://bit.ly/hadamuh
 > Support BOT CALIPH Dengan Cara Donasi :
-> https://saweria.co/Caliph123
-> Pulsa => 081215199447 | 085642337380
+> https://saweria.co/hadapfficial
+> Pulsa => 081314198930 | 089519877328
 
-> BOT Caliph Dibuat Oleh :
-> @caliph71\n
+> BOT lol Dibuat Oleh :
+> @seorangpeople\n
 ================
 `)
 })
